@@ -10,7 +10,7 @@ public class SpringbootFyglApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootFyglApplication.class, args);
-		System.out.println("费用管理-------------------------");
+		System.out.println("费用管理：-------------------------http://localhost:8083/fygl/fygl/bgtz/browse");
 	}
 
 }
