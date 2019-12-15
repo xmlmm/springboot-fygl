@@ -6,10 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author Administrator
- * @date 2019/7/12 0012 09:32
- */
 @RestController
 @RequestMapping(value = "/fygl/bgtz")
 public class BgtzController {
@@ -19,19 +15,18 @@ public class BgtzController {
 
     @RequestMapping(value = "/browse")
     public String browse(){
-        String aa = bgtzService.hiService("你好--");
-        return aa;
+        return bgtzService.hiService("你好--");
     }
 
-    @RequestMapping(value = "/index")
-    public String index(Model model) {
-        System.out.println("index------");
-        return "index";
+    /**
+     * admin服务测试调用此方法
+     * @param name
+     * @return
+     */
+    @RequestMapping(value = "/testFeign")
+    public String testFeign(String name){
+        System.out.println("testFeign：调用成功");
+        return name+"--------------调用成功";
     }
 
-    @RequestMapping(value = "/login")
-    public String login(Model model) {
-        System.out.println("login------");
-        return "index";
-    }
 }
