@@ -2,12 +2,11 @@ package com.mrxmgl.controller;
 
 import com.mrxmgl.service.BgtzService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/fygl/bgtz")
+@RequestMapping(value = "/bgtz")
 public class BgtzController {
 
     @Autowired
@@ -15,6 +14,12 @@ public class BgtzController {
 
     @RequestMapping(value = "/browse")
     public String browse(){
+        System.out.println("request----");
+//        try {
+//            Thread.sleep(100000);
+//        }catch (Exception e){
+//            System.out.println(" hello two error"+e);
+//        }
         return bgtzService.hiService("你好--");
     }
 
