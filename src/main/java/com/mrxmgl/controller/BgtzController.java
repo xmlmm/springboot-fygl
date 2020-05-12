@@ -14,7 +14,8 @@ public class BgtzController {
 
     @RequestMapping(value = "/browse")
     public String browse(){
-        System.out.println("request----");
+        System.out.println("request-----");
+        System.out.println("request123-----");
 //        try {
 //            Thread.sleep(100000);
 //        }catch (Exception e){
